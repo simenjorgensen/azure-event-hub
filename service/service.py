@@ -41,7 +41,6 @@ def get():
             for event_data in batched_events:
                 if index > 0:
                     yield ','
-                # parse x:
                 last_sn = event_data.sequence_number
                 data = str(event_data.message)
                 output_entity = literal_eval(data)
