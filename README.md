@@ -8,10 +8,10 @@ Sample system in Sesam Portal:
   "docker": {
     "environment": {
     ###FILL INN YOUR EVENT HUB CREDENTIALS###
-      "ADDRESS": "$ENV(gcp-address)",
-      "CONSUMER_GROUP": "$ENV(gcp-consumer-group)",
+      "ADDRESS": "$ENV(eventhub-address)",
+      "CONSUMER_GROUP": "$ENV(eventhub-consumer-group)",
       "KEY": "$SECRET(apikey)",
-      "USER": "$ENV(gcp-usr)"
+      "USER": "$ENV(eventhub-usr)"
     },
     "image": "<dockerhub_username>/<repoistory>:<tag>",
     "port": 5000
@@ -36,7 +36,7 @@ Sample input pipe:
     "type": "dtl",
     "rules": {
       "default": [
-        ["add", "_id", "_S.meteringPointId"],
+        ["add", "_id", "_S.entityId"],
         ["copy", "*"],
         ["add", "rdf:type",
           ["ni", "input", "pipe"]
