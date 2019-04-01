@@ -1,7 +1,7 @@
 Receive messages from Azure Event Hub.
 
 Clone or download this repositiory. Bulid and push your docker image and fill in cedentials from your Azure Event Hub. 
-To read more about how this work see our [**Getting Started with Sesam**](https://github.com/sesam-community/wiki/wiki/Getting-started) page
+To read more about how this work see our [**Getting Started with Sesam**](https://github.com/sesam-community/wiki/wiki/Getting-started) page.
 
 Sample system in Sesam Portal:
 ```json
