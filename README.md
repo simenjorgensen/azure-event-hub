@@ -1,4 +1,7 @@
-Receive messages from Azure Event Hub. 
+Receive messages from Azure Event Hub.
+
+Clone or download this repositiory. Bulid and push your docker image and fill in cedentials from your Azure Event Hub. 
+To read more about how this work see our [**Getting Started with Sesam**](https://github.com/sesam-community/wiki/wiki/Getting-started) page
 
 Sample system in Sesam Portal:
 ```json
@@ -19,6 +22,8 @@ Sample system in Sesam Portal:
   "verify_ssl": true
 }
 ```
+The secrets and evnironment variables are stored in **Datahub** in **Settings** in Sesam Node. 
+
 
 Sample input pipe:
 ```json
@@ -47,4 +52,4 @@ Sample input pipe:
 }
 ```
 
-
+Sesam require that all entities has a "_id". To add this property ```["add", "_id", "_S.entityId"]```. The "_S" referes to the the source. 
